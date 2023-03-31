@@ -1,0 +1,7 @@
+const personalBio = [
+    "I am a Full Stack Software Engineer experienced in React, Nodejs, Express, PHP, HTML, CSS, JavaScript, MySQL, MongoDB, REST API, Git and Agile Environment. Throughout my career, I have worked on a variety of projects including IOT Monitoring Platform, Human Resource Management System and Sports Web Application. I am passionate about developing web and mobile applications that are impactful, user-friendly, and scalable. I am always eager to learn new skills and technologies, expanding my skill set, and I am dedicated to continuously improving my skills as a software engineer.",
+    "Apart from my technical skills, I believe that my soft skills are critical assets for my work. Being adaptable enables me to swiftly adjust to new technologies, varying project environments, and changing requirements. This flexibility enables me to readily embrace new challenges and opportunities, which in turn, allows me to continue learning and growing both personally and professionally. As an adaptable individual, I am equally comfortable working independently or as part of a team. My empathy allows me to understand and respect the perspectives of my teammates, while my open-mindedness allows me to consider new ideas and approaches to problem-solving.",
+    "Outside of work, I have a passion for photography, I enjoy capturing landscapes, people, and animals, which allows me to exercise my creativity and attention to detail in a different way.",
+];
+
+export default personalBio;

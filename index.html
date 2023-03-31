@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ivan's Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/ivan-memoji.png" />
+        <link rel="stylesheet" href="css/style.css">
+        <script type="module" src="js/vcard-content.js?v=1.0.0" defer></script>
+        <script type="text/javascript" src="js/nav-sidebar-toggle.js?v=1.0.0" defer></script>
+        <script type="module" src="js/education.js?v=1.0.0" defer></script>
+        <script type="module" src="js/experiences.js?v=1.0.0" defer></script>
+        <script type="module" src="js/certifications.js?v=1.0.0" defer></script>
+        <script type="module" src="js/personal-bio.js?v=1.0.0" defer></script>
+        <script type="module" src="js/skills.js?v=1.0.0" defer></script>
+        <script type="module" src="js/social-media-links.js?v=1.0.0" defer></script>
+        <!-- Icon Library -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    </head>
+
+    <body>
+        <main>
+            <!-- Sidebar -->
+            <aside class="vcard__sidebar" data-sidebar>
+                <div class="vcard__sidebar-profile">
+                    <figure class="vcard__sidebar-memoji-box">
+                        <img src="assets/images/ivan-memoji.png" alt="Ivan Wong" width="80" />
+                    </figure>
+
+                    <div class="vcard__sidebar-profile-content">
+                        <h1 class="vcard__sidebar-profile-name" title="Ivan Wong">Ivan Wong</h1>
+
+                        <p class="vcard__sidebar-profile-title">Full Stack Software Engineer</p>
+                    </div>
+
+                    <button class="vcard__sidebar-profile-toggle-btn" data-sidebar-btn>
+                        <span>Show Contacts</span>
+
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </button>
+                </div>
+
+                <div class="vcard__sidebar-contact">
+                    <div class="vcard__sidebar-contact-seperator"></div>
+
+                    <ul class="vcard__sidebar-contacts-list">
+                        <li class="vcard__sidebar-contact-item">
+                            <div class="icon-box">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+
+                            <div class="vcard__sidebar-contact-info">
+                                <p class="vcard__sidebar-contact-title">Email</p>
+
+                                <a href="mailto:ivanwong810520@gmail.com" class="vcard__sidebar-contact-link">ivanwong810520@gmail.com</a>
+                            </div>
+                        </li>
+
+                        <li class="vcard__sidebar-contact-item">
+                            <div class="icon-box">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+
+                            <div class="vcard__sidebar-contact-info">
+                                <p class="vcard__sidebar-contact-title">Location</p>
+
+                                <address>Kajang, Selangor</address>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="vcard__sidebar-contact-seperator"></div>
+
+                    <ul id="vcard__sidebar-social-section" class="vcard__sidebar-social-list">
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <button class="navbar-link  active" data-nav-link>About</button>
+                        </li>
+
+                        <li class="navbar-item">
+                            <button class="navbar-link" data-nav-link>Resume</button>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- About Page -->
+                <article class="vcard__about-page  active" data-page="about">
+                    <header>
+                        <h2 class="h2 article-title">About me</h2>
+                    </header>
+
+                    <!-- Personal Bio -->
+                    <section id="vcard__personal-bio-section" class="vcard__personal-bio">
+                    </section>
+
+                    <!-- Licenses and Certifications -->
+                    <section class="vcard__certification">
+                        <h3 class="h3 vcard__certification-title">Licenses & certifications</h3>
+
+                        <ul id="vcard__certification-section" class="vcard__certification-list">
+                        </ul>
+                    </section>
+                </article>
+
+                <!-- Resume Page -->
+                <article class="vcard__resume-page" data-page="resume">
+                    <header>
+                        <h2 class="h2 article-title">Resume</h2>
+                    </header>
+
+                    <!-- Experiences -->
+                    <section class="timeline">
+
+                        <div class="title-wrapper">
+                            <div class="icon-box">
+                                <ion-icon name="book-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="h3">Experience</h3>
+                        </div>
+
+                        <ol id="vcard__experience-section" class="timeline-list">
+                        </ol>
+                    </section>
+
+                    <!-- Education -->
+                    <section class="timeline">
+                        <div class="title-wrapper">
+                            <div class="icon-box">
+                                <ion-icon name="book-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="h3">Education</h3>
+                        </div>
+
+                        <ol id="vcard__education-section" class="timeline-list">
+                        </ol>
+                    </section>
+
+                    <!-- Skills -->
+                    <section class="vcard__skills">
+                        <h3 class="h3 vcard__skills-title">My skills</h3>
+
+                        <ul id="vcard__skill-section" class="vcard__skills-list vcard__skills-content-card">
+                        </ul>
+                    </section>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>

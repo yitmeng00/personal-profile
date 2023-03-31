@@ -1,0 +1,933 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root {
+    --memoji-bg-color: linear-gradient(
+        to bottom right,
+        hsl(240, 1%, 25%) 3%,
+        hsl(0, 0%, 19%) 97%
+    );
+    --bg-gradient-jet: linear-gradient(
+            to bottom right,
+            hsla(240, 1%, 18%, 0.251) 0%,
+            hsla(240, 2%, 11%, 0) 100%
+        ),
+        hsl(240, 2%, 13%);
+    --profile-toggle-btn-hover-bg: linear-gradient(
+        to bottom right,
+        hsl(180, 100%, 60%) 0%,
+        hsla(36, 100%, 69%, 0) 50%
+    );
+    --icon-box-border: linear-gradient(
+        to bottom right,
+        hsl(0, 0%, 25%) 0%,
+        hsla(0, 0%, 25%, 0) 50%
+    );
+    --profile-designation-bg: hsl(240, 1%, 17%);
+    --sidebar-article-bg: hsl(240, 2%, 12%);
+    --primary-color: hsl(0, 0%, 7%);
+    --secondary-color: hsl(180, 100%, 60%);
+    --primary-font-color: hsl(0, 0%, 98%);
+    --secondary-font-color: hsl(0, 0%, 84%);
+    --tertiary-font-color: hsla(0, 0%, 84%, 0.7);
+    --primary-border-color: hsl(0, 0%, 22%);
+    --primary-font-family: "Poppins", sans-serif;
+    --fs-1: 24px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 14px;
+    --fs-5: 13px;
+    --fs-6: 11px;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --primary-box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    --secondary-box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    --primary-transition: 0.25s ease;
+    --secondary-transition: 0.5s ease-in-out;
+}
+
+/* Default styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img,
+ion-icon,
+a,
+button span {
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+:focus {
+    outline-color: var(--secondary-color);
+}
+
+body {
+    font-family: var(--primary-font-family);
+    background: var(--primary-color);
+}
+
+main {
+    margin: 15px 12px;
+    margin-bottom: 75px;
+    min-width: 259px;
+}
+
+/* Reused styles */
+.h2,
+.h3,
+.h4,
+.h5 {
+    color: var(--primary-font-color);
+    text-transform: capitalize;
+}
+
+.h2 {
+    font-size: var(--fs-1);
+}
+
+.h3 {
+    font-size: var(--fs-2);
+}
+
+.h5 {
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+}
+
+.vcard__sidebar,
+article {
+    background: var(--sidebar-article-bg);
+    border: 1px solid var(--primary-border-color);
+    border-radius: 1.25em;
+    padding: 15px;
+    box-shadow: var(--primary-box-shadow);
+    z-index: 1;
+}
+
+.icon-box {
+    position: relative;
+    background: var(--icon-box-border);
+    width: 30px;
+    height: 30px;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--secondary-color);
+    box-shadow: var(--primary-box-shadow);
+    z-index: 1;
+}
+
+.icon-box::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.icon-box ion-icon {
+    --ionicon-stroke-width: 35px;
+}
+
+article {
+    display: none;
+}
+
+article.active {
+    display: block;
+    animation: fade 0.5s ease backwards;
+}
+
+.article-title {
+    position: relative;
+    padding-bottom: 7px;
+}
+
+.article-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 3px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Sidebar */
+.vcard__sidebar {
+    margin-bottom: 15px;
+    max-height: 112px;
+    overflow: hidden;
+    transition: var(--secondary-transition);
+}
+
+.vcard__sidebar.active {
+    max-height: 405px;
+}
+
+.vcard__sidebar-profile {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.vcard__sidebar-memoji-box {
+    background: var(--memoji-bg-color);
+    border-radius: 1.25em;
+}
+
+.vcard__sidebar-profile-content .vcard__sidebar-profile-name {
+    color: var(--primary-font-color);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-500);
+    letter-spacing: -0.25px;
+    margin-bottom: 10px;
+}
+
+.vcard__sidebar-profile-content .vcard__sidebar-profile-title {
+    color: var(--primary-font-color);
+    background: var(--profile-designation-bg);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    width: max-content;
+    padding: 3px 12px;
+    border-radius: 8px;
+}
+
+.vcard__sidebar-profile-toggle-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 0 15px;
+    font-size: 13px;
+    color: var(--secondary-color);
+    padding: 10px;
+    box-shadow: var(--secondary-box-shadow);
+    transition: var(--primary-transition);
+    z-index: 1;
+}
+
+.vcard__sidebar-profile-toggle-btn::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--bg-gradient-jet);
+    transition: var(--primary-transition);
+    z-index: -1;
+}
+
+.vcard__sidebar-profile-toggle-btn:hover,
+.vcard__sidebar-profile-toggle-btn:focus {
+    background: var(--profile-toggle-btn-hover-bg);
+}
+
+.vcard__sidebar-profile-toggle-btn span {
+    display: none;
+}
+
+.vcard__sidebar-contact-seperator {
+    width: 100%;
+    height: 1px;
+    background: var(--primary-border-color);
+    margin: 16px 0;
+}
+
+.vcard__sidebar-contact {
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--secondary-transition);
+}
+
+.vcard__sidebar.active .vcard__sidebar-contact {
+    opacity: 1;
+    visibility: visible;
+}
+
+.vcard__sidebar-contacts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.vcard__sidebar-contact-item {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.vcard__sidebar-contact-info {
+    max-width: calc(100% - 46px);
+    width: calc(100% - 46px);
+}
+
+.vcard__sidebar-contact-title {
+    color: var(--tertiary-font-color);
+    font-size: var(--fs-6);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link, address) {
+    color: var(--primary-font-color);
+    font-size: var(--fs-5);
+}
+
+.vcard__sidebar-contact-info address {
+    font-style: normal;
+}
+
+.vcard__sidebar-social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+}
+
+.vcard__sidebar-social-item .vcard__sidebar-social-link {
+    color: var(--tertiary-font-color);
+    font-size: 18px;
+}
+
+.vcard__sidebar-social-item .vcard__sidebar-social-link:hover {
+    color: var(--secondary-font-color);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--primary-border-color);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--secondary-box-shadow);
+    z-index: 5;
+}
+
+.navbar-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.navbar-link {
+    color: var(--secondary-font-color);
+    font-size: var(--fs-6);
+    padding: 20px 7px;
+    transition: color var(--primary-transition);
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+    color: var(--tertiary-font-color);
+}
+
+.navbar-link.active {
+    color: var(--secondary-color);
+}
+
+/* About */
+.vcard__about-page .article-title {
+    margin-bottom: 15px;
+}
+
+.vcard__personal-bio {
+    color: var(--secondary-font-color);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+.vcard__personal-bio p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Licenses and Certifications */
+.vcard__certification {
+    margin-bottom: 1em;
+}
+
+.vcard__certification-title {
+    margin-bottom: 20px;
+}
+
+.vcard__certification-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.vcard__certification-item {
+    position: relative;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--secondary-box-shadow);
+    z-index: 1;
+}
+
+.vcard__certification-item::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.vcard__certification-icon-box {
+    margin-bottom: 10px;
+}
+
+.vcard__certification-icon-box img {
+    margin: auto;
+}
+
+.vcard__certification-content-box {
+    text-align: center;
+}
+
+.vcard__certification-item-title {
+    margin-bottom: 7px;
+}
+
+.vcard__certification-item-text {
+    color: var(--secondary-font-color);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+}
+
+/* Resume Page */
+.article-title {
+    margin-bottom: 30px;
+}
+
+/* Experiences and Education */
+.timeline {
+    margin-bottom: 30px;
+}
+
+.timeline .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.timeline-text-container p,
+#vcard__education-section p {
+    text-align: justify;
+}
+
+.timeline-list {
+    font-size: var(--fs-4);
+    margin-left: 45px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.timeline-item-title {
+    font-size: var(--fs-4);
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.timeline-job-title {
+    color: var(--primary-font-color);
+    font-weight: var(--fw-400);
+    margin-bottom: 0.5em;
+}
+
+.timeline-list span {
+    color: var(--secondary-color);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background: var(--primary-border-color);
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -33px;
+    height: 6px;
+    width: 6px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--primary-border-color);
+}
+
+.timeline-text {
+    color: var(--secondary-font-color);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+/* Skills */
+.vcard__skills-title {
+    margin-bottom: 20px;
+}
+
+.vcard__skills-list {
+    padding: 20px;
+}
+
+.vcard__skills-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.vcard__skills .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.vcard__skills .title-wrapper data {
+    color: var(--secondary-font-color);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-300);
+}
+
+.vcard__skills-progress-bg {
+    background: var(--primary-border-color);
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.vcard__skills-progress-fill {
+    background: var(--secondary-color);
+    height: 100%;
+    border-radius: inherit;
+}
+
+.vcard__skills-content-card {
+    position: relative;
+    padding: 2em 1.5em;
+    border-radius: 14px;
+    box-shadow: var(--secondary-box-shadow);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.vcard__skills-content-card::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (min-width: 580px) {
+    :root {
+        --fs-1: 32px;
+        --fs-2: 24px;
+        --fs-3: 26px;
+        --fs-4: 15px;
+        --fs-5: 15px;
+    }
+
+    /* Reused styles */
+    .vcard__sidebar,
+    article {
+        width: 520px;
+        margin-inline: auto;
+        padding: 30px;
+    }
+
+    .article-title {
+        font-weight: var(--fw-600);
+        padding-bottom: 15px;
+    }
+
+    .article-title::after {
+        width: 40px;
+        height: 5px;
+    }
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    /* Main styles */
+    main {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
+    /* Sidebar styles */
+    .vcard__sidebar {
+        max-height: 180px;
+        margin-bottom: 30px;
+    }
+
+    .vcard__sidebar.active {
+        max-height: 584px;
+    }
+
+    .vcard__sidebar-profile {
+        gap: 25px;
+    }
+
+    .vcard__sidebar-memoji-box {
+        border-radius: 30px;
+    }
+
+    .vcard__sidebar-memoji-box img {
+        width: 120px;
+    }
+
+    .vcard__sidebar-profile-content .vcard__sidebar-profile-name {
+        margin-bottom: 15px;
+    }
+
+    .vcard__sidebar-profile-content .vcard__sidebar-profile-title {
+        padding: 5px 18px;
+    }
+
+    .vcard__sidebar-profile-toggle-btn {
+        top: -30px;
+        right: -30px;
+        padding: 10px 15px;
+    }
+
+    .vcard__sidebar-profile-toggle-btn span {
+        display: block;
+        font-size: var(--fs-6);
+    }
+
+    .vcard__sidebar-profile-toggle-btn ion-icon {
+        display: none;
+    }
+
+    .vcard__sidebar-contact-seperator {
+        margin: 32px 0;
+    }
+
+    .vcard__sidebar-contacts-list {
+        gap: 20px;
+    }
+
+    .vcard__sidebar-contact-info {
+        max-width: calc(100% - 64px);
+        width: calc(100% - 64px);
+    }
+
+    /* Navbar styles */
+    .navbar {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .navbar-list {
+        gap: 20px;
+    }
+
+    .navbar-link {
+        --fs-6: 14px;
+    }
+
+    /* About page styles */
+    .vcard__about-page .article-title {
+        margin-bottom: 20px;
+    }
+
+    .vcard__personal-bio {
+        margin-bottom: 40px;
+    }
+
+    .vcard__certification-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 1.5em;
+    }
+
+    .vcard__certification-icon-box {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+
+    .vcard__certification-content-box {
+        text-align: left;
+        align-self: center;
+    }
+
+    /* Resume page styles */
+    .timeline-list {
+        margin-left: 65px;
+    }
+
+    .timeline-item:not(:last-child)::before {
+        left: -40px;
+    }
+
+    .timeline-item::after {
+        height: 8px;
+        width: 8px;
+        left: -43px;
+    }
+
+    .vcard__skills-item:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Reused styles */
+    .vcard__sidebar,
+    article {
+        width: 700px;
+    }
+
+    /* Sidebar styles */
+    .vcard__sidebar-contacts-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+    }
+
+    .vcard__sidebar-profile-title {
+        --fs-6: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --primary-box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+        --secondary-box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+    }
+
+    /* Reused styles */
+    .vcard__sidebar,
+    article {
+        width: 950px;
+    }
+
+    /* Main styles */
+    main {
+        margin-bottom: 60px;
+    }
+
+    .main-content {
+        position: relative;
+        width: max-content;
+        margin: auto;
+    }
+
+    /* Navbar styles */
+    .navbar {
+        position: absolute;
+        bottom: auto;
+        top: 0;
+        left: auto;
+        right: 0;
+        width: max-content;
+        border-radius: 0 20px;
+        padding: 0 20px;
+        box-shadow: none;
+    }
+
+    .navbar-list {
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .navbar-link {
+        font-weight: var(--fw-500);
+    }
+
+    /* Certification styles */
+    .vcard__certification-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 25px;
+    }
+}
+
+@media (min-width: 1250px) {
+    /* Scrollbar styles */
+    body::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: var(--primary-color);
+    }
+
+    body::-webkit-scrollbar-thumb {
+        border: 5px solid var(--primary-color);
+        background: hsla(0, 0%, 100%, 0.1);
+        border-radius: 20px;
+        box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+            inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+        background: hsla(0, 0%, 100%, 0.15);
+    }
+
+    body::-webkit-scrollbar-button {
+        height: 3.75em;
+    }
+
+    /* Reused styles */
+    .vcard__sidebar,
+    article {
+        width: auto;
+    }
+
+    article {
+        min-height: 100%;
+    }
+
+    /* Main styles */
+    main {
+        max-width: 1200px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .main-content {
+        min-width: 75%;
+        width: 75%;
+        margin: 0;
+    }
+
+    /* Sidebar styles */
+    .vcard__sidebar {
+        position: sticky;
+        top: 60px;
+        max-height: max-content;
+        height: 100%;
+        margin-bottom: 0;
+        padding-top: 60px;
+        z-index: 1;
+    }
+
+    .vcard__sidebar-profile {
+        flex-direction: column;
+    }
+
+    .vcard__sidebar-memoji-box img {
+        width: 150px;
+    }
+
+    .vcard__sidebar-profile-content .vcard__sidebar-profile-name {
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .vcard__sidebar-profile-content .vcard__sidebar-profile-title {
+        margin: auto;
+    }
+
+    .vcard__sidebar-profile-toggle-btn {
+        display: none;
+    }
+
+    .vcard__sidebar-contact {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .vcard__sidebar-contacts-list {
+        grid-template-columns: 1fr;
+    }
+
+    .vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link, address) {
+        --fs-5: 14px;
+        font-weight: var(--fw-300);
+    }
+
+    .vcard__sidebar-contact-seperator:last-of-type {
+        margin: 15px 0;
+        opacity: 0;
+    }
+
+    .vcard__sidebar-social-list {
+        justify-content: center;
+    }
+
+    /* Resumec page styles */
+    .timeline-text {
+        max-width: 700px;
+    }
+}

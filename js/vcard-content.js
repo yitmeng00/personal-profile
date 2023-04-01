@@ -8,6 +8,9 @@ import educations from "./education.js";
 import skills from "./skills.js";
 
 // selectors
+const profileSection = document.getElementById(
+    "vcard__sidebar-profile-section"
+);
 const contactSection = document.getElementById(
     "vcard__sidebar-contact-section"
 );
@@ -23,6 +26,47 @@ const certificationSection = document.getElementById(
 const experiencesSection = document.getElementById("vcard__experience-section");
 const educationSection = document.getElementById("vcard__education-section");
 const skillSection = document.getElementById("vcard__skill-section");
+
+/*
+Profile Section
+*/
+const figure = document.createElement("figure");
+figure.classList.add("vcard__sidebar-memoji-box");
+
+const img = document.createElement("img");
+img.src = "assets/images/ivan-memoji.png";
+img.alt = "Ivan Wong";
+img.width = "80";
+
+figure.appendChild(img);
+
+const div = document.createElement("div");
+div.classList.add("vcard__sidebar-profile-content");
+
+const h1 = document.createElement("h1");
+h1.classList.add("vcard__sidebar-profile-name");
+h1.title = "Ivan Wong";
+h1.textContent = "Ivan Wong";
+
+div.appendChild(h1);
+
+const p = document.createElement("p");
+p.classList.add("vcard__sidebar-profile-title");
+p.textContent = "Full Stack Software Engineer";
+
+div.appendChild(p);
+
+const button = document.createElement("button");
+button.classList.add("vcard__sidebar-profile-toggle-btn");
+button.setAttribute("data-sidebar-btn", "");
+button.innerHTML = `
+    <span>Show Contacts</span>
+    <ion-icon name="chevron-down"></ion-icon>
+`;
+
+profileSection.appendChild(figure);
+profileSection.appendChild(div);
+profileSection.appendChild(button);
 
 /*
 Contacts Section
@@ -63,7 +107,7 @@ contacts.forEach((contact) => {
         contactLink.innerText = link;
         contactInfo.appendChild(contactLink);
     }
- 
+
     contactSection.appendChild(listItem);
 });
 

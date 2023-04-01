@@ -1,4 +1,5 @@
 // modules
+import contacts from "./contacts.js";
 import socialMediaLinks from "./social-media-links.js";
 import personalBio from "./personal-bio.js";
 import certifications from "./certifications.js";
@@ -7,6 +8,9 @@ import educations from "./education.js";
 import skills from "./skills.js";
 
 // selectors
+const contactSection = document.getElementById(
+    "vcard__sidebar-contact-section"
+);
 const socialListSection = document.getElementById(
     "vcard__sidebar-social-section"
 );
@@ -19,6 +23,49 @@ const certificationSection = document.getElementById(
 const experiencesSection = document.getElementById("vcard__experience-section");
 const educationSection = document.getElementById("vcard__education-section");
 const skillSection = document.getElementById("vcard__skill-section");
+
+/*
+Contacts Section
+*/
+// loop through the contacts array and render the html for each item
+contacts.forEach((contact) => {
+    const { icon, title, link } = contact;
+
+    const listItem = document.createElement("li");
+    listItem.classList.add("vcard__sidebar-contact-item");
+
+    const iconBox = document.createElement("div");
+    iconBox.classList.add("icon-box");
+
+    const contactIcon = document.createElement("ion-icon");
+    contactIcon.setAttribute("name", icon);
+
+    const contactInfo = document.createElement("div");
+    contactInfo.classList.add("vcard__sidebar-contact-info");
+
+    const contactTitle = document.createElement("p");
+    contactTitle.classList.add("vcard__sidebar-contact-title");
+    contactTitle.innerText = title;
+
+    iconBox.appendChild(contactIcon);
+    listItem.appendChild(iconBox);
+    listItem.appendChild(contactInfo);
+    contactInfo.appendChild(contactTitle);
+
+    if (title === "Location") {
+        const address = document.createElement("address");
+        address.innerText = link;
+        contactInfo.appendChild(address);
+    } else {
+        const contactLink = document.createElement("a");
+        contactLink.classList.add("vcard__sidebar-contact-link");
+        contactLink.setAttribute("href", `mailto:${link}`);
+        contactLink.innerText = link;
+        contactInfo.appendChild(contactLink);
+    }
+ 
+    contactSection.appendChild(listItem);
+});
 
 /*
 Social Media Links Section

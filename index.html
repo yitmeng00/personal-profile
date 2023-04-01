@@ -7,8 +7,9 @@
         <title>Ivan's vCard</title>
         <link rel="icon" type="image/x-icon" href="assets/images/ivan-memoji.png" />
         <link rel="stylesheet" href="css/style.css?v=1.0.0">
-        <script type="module" src="js/vcard-content.js?v=1.0.0" defer></script>
+        <script type="module" src="js/vcard-content.js?v=1.0.1" defer></script>
         <script type="text/javascript" src="js/nav-sidebar-toggle.js?v=1.0.0" defer></script>
+        <script type="module" src="js/contacts.js?v=1.0.0" defer></script>
         <script type="module" src="js/education.js?v=1.0.0" defer></script>
         <script type="module" src="js/experiences.js?v=1.0.0" defer></script>
         <script type="module" src="js/certifications.js?v=1.0.0" defer></script>
@@ -45,30 +46,7 @@
                 <div class="vcard__sidebar-contact">
                     <div class="vcard__sidebar-contact-seperator"></div>
 
-                    <ul class="vcard__sidebar-contacts-list">
-                        <li class="vcard__sidebar-contact-item">
-                            <div class="icon-box">
-                                <ion-icon name="mail-outline"></ion-icon>
-                            </div>
-
-                            <div class="vcard__sidebar-contact-info">
-                                <p class="vcard__sidebar-contact-title">Email</p>
-
-                                <a href="mailto:ivanwong810520@gmail.com" class="vcard__sidebar-contact-link">ivanwong810520@gmail.com</a>
-                            </div>
-                        </li>
-
-                        <li class="vcard__sidebar-contact-item">
-                            <div class="icon-box">
-                                <ion-icon name="location-outline"></ion-icon>
-                            </div>
-
-                            <div class="vcard__sidebar-contact-info">
-                                <p class="vcard__sidebar-contact-title">Location</p>
-
-                                <address>Kajang, Selangor</address>
-                            </div>
-                        </li>
+                    <ul id="vcard__sidebar-contact-section" class="vcard__sidebar-contacts-list">
                     </ul>
 
                     <div class="vcard__sidebar-contact-seperator"></div>

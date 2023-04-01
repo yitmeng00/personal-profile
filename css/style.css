@@ -1,26 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 :root {
-    --memoji-bg-color: linear-gradient(
-        to bottom right,
-        hsl(240, 1%, 25%) 3%,
-        hsl(0, 0%, 19%) 97%
-    );
-    --bg-gradient-jet: linear-gradient(
-            to bottom right,
-            hsla(240, 1%, 18%, 0.251) 0%,
-            hsla(240, 2%, 11%, 0) 100%
-        ),
-        hsl(240, 2%, 13%);
-    --profile-toggle-btn-hover-bg: linear-gradient(
-        to bottom right,
-        hsl(180, 100%, 60%) 0%,
-        hsla(36, 100%, 69%, 0) 50%
-    );
-    --icon-box-border: linear-gradient(
-        to bottom right,
-        hsl(0, 0%, 25%) 0%,
-        hsla(0, 0%, 25%, 0) 50%
-    );
+    --memoji-bg-color: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    --profile-toggle-btn-hover-bg: linear-gradient(to bottom right, hsl(180, 100%, 60%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --icon-box-border: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
     --profile-designation-bg: hsl(240, 1%, 17%);
     --sidebar-article-bg: hsl(240, 2%, 12%);
     --primary-color: hsl(0, 0%, 7%);
@@ -213,7 +196,7 @@ article.active {
 
 .vcard__sidebar-memoji-box {
     background: var(--memoji-bg-color);
-    border-radius: 1.25em;
+    border-radius: 1.5em;
 }
 
 .vcard__sidebar-profile-content .vcard__sidebar-profile-name {
@@ -230,7 +213,7 @@ article.active {
     font-size: var(--fs-6);
     font-weight: var(--fw-300);
     width: max-content;
-    padding: 3px 12px;
+    padding: 5px 12px;
     border-radius: 8px;
 }
 
@@ -384,6 +367,7 @@ article.active {
     font-size: var(--fs-4);
     font-weight: var(--fw-300);
     line-height: 1.6;
+    margin-bottom: 40px;
 }
 
 .vcard__personal-bio p {
@@ -423,20 +407,13 @@ article.active {
     z-index: -1;
 }
 
-.vcard__certification-icon-box {
-    margin-bottom: 10px;
-}
-
 .vcard__certification-icon-box img {
     margin: auto;
 }
 
 .vcard__certification-content-box {
     text-align: center;
-}
-
-.vcard__certification-item-title {
-    margin-bottom: 7px;
+    margin-top: 1em;
 }
 
 .vcard__certification-item-text {
@@ -444,6 +421,7 @@ article.active {
     font-size: var(--fs-4);
     font-weight: var(--fw-3);
     line-height: 1.6;
+    margin-top: 0.3em;
 }
 
 /* Resume Page */
@@ -478,7 +456,7 @@ article.active {
 }
 
 .timeline-item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 }
 
 .timeline-item-title {
@@ -528,14 +506,6 @@ article.active {
 }
 
 /* Skills */
-.vcard__skills-title {
-    margin-bottom: 20px;
-}
-
-.vcard__skills-list {
-    padding: 20px;
-}
-
 .vcard__skills-item:not(:last-child) {
     margin-bottom: 15px;
 }
@@ -573,6 +543,7 @@ article.active {
     box-shadow: var(--secondary-box-shadow);
     cursor: pointer;
     z-index: 1;
+    margin-top: 1.25em;
 }
 
 .vcard__skills-content-card::before {
@@ -591,7 +562,7 @@ article.active {
         --fs-2: 24px;
         --fs-3: 26px;
         --fs-4: 15px;
-        --fs-5: 15px;
+        --fs-5: 14px;
     }
 
     /* Reused styles */
@@ -639,20 +610,8 @@ article.active {
         gap: 25px;
     }
 
-    .vcard__sidebar-memoji-box {
-        border-radius: 30px;
-    }
-
     .vcard__sidebar-memoji-box img {
         width: 120px;
-    }
-
-    .vcard__sidebar-profile-content .vcard__sidebar-profile-name {
-        margin-bottom: 15px;
-    }
-
-    .vcard__sidebar-profile-content .vcard__sidebar-profile-title {
-        padding: 5px 18px;
     }
 
     .vcard__sidebar-profile-toggle-btn {
@@ -674,35 +633,14 @@ article.active {
         margin: 32px 0;
     }
 
-    .vcard__sidebar-contacts-list {
-        gap: 20px;
-    }
-
     .vcard__sidebar-contact-info {
         max-width: calc(100% - 64px);
         width: calc(100% - 64px);
     }
 
-    /* Navbar styles */
-    .navbar {
-        border-radius: 20px 20px 0 0;
-    }
-
-    .navbar-list {
-        gap: 20px;
-    }
-
-    .navbar-link {
-        --fs-6: 14px;
-    }
-
     /* About page styles */
     .vcard__about-page .article-title {
         margin-bottom: 20px;
-    }
-
-    .vcard__personal-bio {
-        margin-bottom: 40px;
     }
 
     .vcard__certification-item {
@@ -713,14 +651,10 @@ article.active {
         padding: 1.5em;
     }
 
-    .vcard__certification-icon-box {
-        margin-bottom: 0;
-        margin-top: 5px;
-    }
-
     .vcard__certification-content-box {
         text-align: left;
         align-self: center;
+        margin-top: 0em;
     }
 
     /* Resume page styles */
@@ -744,7 +678,7 @@ article.active {
 }
 
 @media (min-width: 768px) {
-    /* Reused styles */
+    /* Main styles */
     .vcard__sidebar,
     article {
         width: 700px;
@@ -762,18 +696,12 @@ article.active {
 }
 
 @media (min-width: 1024px) {
-    :root {
-        --primary-box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
-        --secondary-box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.125);
-    }
-
-    /* Reused styles */
+    /* Main styles */
     .vcard__sidebar,
     article {
         width: 950px;
     }
 
-    /* Main styles */
     main {
         margin-bottom: 60px;
     }
@@ -839,7 +767,7 @@ article.active {
         height: 3.75em;
     }
 
-    /* Reused styles */
+    /* Main styles */
     .vcard__sidebar,
     article {
         width: auto;
@@ -849,7 +777,6 @@ article.active {
         min-height: 100%;
     }
 
-    /* Main styles */
     main {
         max-width: 1200px;
         margin-inline: auto;
@@ -913,7 +840,6 @@ article.active {
     }
 
     .vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link, address) {
-        --fs-5: 14px;
         font-weight: var(--fw-300);
     }
 

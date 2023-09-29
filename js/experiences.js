@@ -8,6 +8,7 @@ const experiences = [
             "- Contributed to the development of an IoT Monitoring Platform using HTML, CSS, JavaScript, PHP and MongoDB, enabling clients to monitor and control their devices in real-time.",
             "- Developed an internal HRM system with multi-level approval using HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.",
             "- Contributed to a project involving the integration of in-house software with Milestone.",
+            "- Contributed to the development of a Workflow Automation Platform using the MERN stack.",
         ],
     },
     {

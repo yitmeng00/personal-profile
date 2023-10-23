@@ -52,7 +52,7 @@ div.appendChild(h1);
 
 const p = document.createElement("p");
 p.classList.add("vcard__sidebar-profile-title");
-p.textContent = "Full Stack Software Engineer";
+p.textContent = "Full Stack Developer";
 
 div.appendChild(p);
 

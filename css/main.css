@@ -5,7 +5,7 @@
     --profile-toggle-btn-hover-bg: linear-gradient(to bottom right, hsl(180, 100%, 60%) 0%, hsla(36, 100%, 69%, 0) 50%);
     --icon-box-border: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
     --profile-designation-bg: hsl(240, 1%, 17%);
-    --sidebar-article-bg: hsl(240, 2%, 12%);
+    --navbar-article-bg: hsl(240, 2%, 12%);
     --primary-color: hsl(0, 0%, 7%);
     --secondary-color: hsl(180, 100%, 60%);
     --primary-font-color: hsl(0, 0%, 98%);
@@ -103,9 +103,9 @@ main {
     font-weight: var(--fw-500);
 }
 
-.vcard__sidebar,
+.vcard__navbar,
 article {
-    background: var(--sidebar-article-bg);
+    background: var(--navbar-article-bg);
     border: 1px solid var(--primary-border-color);
     border-radius: 1.25em;
     padding: 15px;
@@ -174,19 +174,19 @@ article.active {
     }
 }
 
-/* Sidebar */
-.vcard__sidebar {
+/* Navbar */
+.vcard__navbar {
     margin-bottom: 15px;
     max-height: 112px;
     overflow: hidden;
     transition: var(--secondary-transition);
 }
 
-.vcard__sidebar.active {
+.vcard__navbar.active {
     max-height: 405px;
 }
 
-.vcard__sidebar-profile {
+.vcard__navbar-profile {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -194,12 +194,12 @@ article.active {
     gap: 15px;
 }
 
-.vcard__sidebar-memoji-box {
+.vcard__navbar-memoji-box {
     background: var(--memoji-bg-color);
     border-radius: 1.5em;
 }
 
-.vcard__sidebar-profile-content .vcard__sidebar-profile-name {
+.vcard__navbar-profile-content .vcard__navbar-profile-name {
     color: var(--primary-font-color);
     font-size: var(--fs-3);
     font-weight: var(--fw-500);
@@ -207,7 +207,7 @@ article.active {
     margin-bottom: 10px;
 }
 
-.vcard__sidebar-profile-content .vcard__sidebar-profile-title {
+.vcard__navbar-profile-content .vcard__navbar-profile-title {
     color: var(--primary-font-color);
     background: var(--profile-designation-bg);
     font-size: var(--fs-6);
@@ -217,7 +217,7 @@ article.active {
     border-radius: 8px;
 }
 
-.vcard__sidebar-profile-toggle-btn {
+.vcard__navbar-profile-toggle-btn {
     position: absolute;
     top: -15px;
     right: -15px;
@@ -230,7 +230,7 @@ article.active {
     z-index: 1;
 }
 
-.vcard__sidebar-profile-toggle-btn::before {
+.vcard__navbar-profile-toggle-btn::before {
     content: "";
     position: absolute;
     inset: 1px;
@@ -240,68 +240,68 @@ article.active {
     z-index: -1;
 }
 
-.vcard__sidebar-profile-toggle-btn:hover,
-.vcard__sidebar-profile-toggle-btn:focus {
+.vcard__navbar-profile-toggle-btn:hover,
+.vcard__navbar-profile-toggle-btn:focus {
     background: var(--profile-toggle-btn-hover-bg);
 }
 
-.vcard__sidebar-profile-toggle-btn span {
+.vcard__navbar-profile-toggle-btn span {
     display: none;
 }
 
-.vcard__sidebar-contact-seperator {
+.vcard__navbar-contact-seperator {
     width: 100%;
     height: 1px;
     background: var(--primary-border-color);
     margin: 16px 0;
 }
 
-.vcard__sidebar-contact {
+.vcard__navbar-contact {
     opacity: 0;
     visibility: hidden;
     transition: var(--secondary-transition);
 }
 
-.vcard__sidebar.active .vcard__sidebar-contact {
+.vcard__navbar.active .vcard__navbar-contact {
     opacity: 1;
     visibility: visible;
 }
 
-.vcard__sidebar-contacts-list {
+.vcard__navbar-contacts-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
 }
 
-.vcard__sidebar-contact-item {
+.vcard__navbar-contact-item {
     min-width: 100%;
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.vcard__sidebar-contact-info {
+.vcard__navbar-contact-info {
     max-width: calc(100% - 46px);
     width: calc(100% - 46px);
 }
 
-.vcard__sidebar-contact-title {
+.vcard__navbar-contact-title {
     color: var(--tertiary-font-color);
     font-size: var(--fs-6);
     text-transform: uppercase;
     margin-bottom: 2px;
 }
 
-.vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link, address) {
+.vcard__navbar-contact-info :is(.vcard__navbar-contact-link, address) {
     color: var(--primary-font-color);
     font-size: var(--fs-5);
 }
 
-.vcard__sidebar-contact-info address {
+.vcard__navbar-contact-info address {
     font-style: normal;
 }
 
-.vcard__sidebar-social-list {
+.vcard__navbar-social-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -310,12 +310,12 @@ article.active {
     padding-left: 7px;
 }
 
-.vcard__sidebar-social-item .vcard__sidebar-social-link {
+.vcard__navbar-social-item .vcard__navbar-social-link {
     color: var(--tertiary-font-color);
     font-size: 18px;
 }
 
-.vcard__sidebar-social-item .vcard__sidebar-social-link:hover {
+.vcard__navbar-social-item .vcard__navbar-social-link:hover {
     color: var(--secondary-font-color);
 }
 
@@ -566,7 +566,7 @@ article.active {
     }
 
     /* Reused styles */
-    .vcard__sidebar,
+    .vcard__navbar,
     article {
         width: 520px;
         margin-inline: auto;
@@ -596,44 +596,44 @@ article.active {
         margin-bottom: 100px;
     }
 
-    /* Sidebar styles */
-    .vcard__sidebar {
+    /* Navbar styles */
+    .vcard__navbar {
         max-height: 180px;
         margin-bottom: 30px;
     }
 
-    .vcard__sidebar.active {
+    .vcard__navbar.active {
         max-height: 584px;
     }
 
-    .vcard__sidebar-profile {
+    .vcard__navbar-profile {
         gap: 25px;
     }
 
-    .vcard__sidebar-memoji-box img {
+    .vcard__navbar-memoji-box img {
         width: 120px;
     }
 
-    .vcard__sidebar-profile-toggle-btn {
+    .vcard__navbar-profile-toggle-btn {
         top: -30px;
         right: -30px;
         padding: 10px 15px;
     }
 
-    .vcard__sidebar-profile-toggle-btn span {
+    .vcard__navbar-profile-toggle-btn span {
         display: block;
         font-size: var(--fs-6);
     }
 
-    .vcard__sidebar-profile-toggle-btn ion-icon {
+    .vcard__navbar-profile-toggle-btn ion-icon {
         display: none;
     }
 
-    .vcard__sidebar-contact-seperator {
+    .vcard__navbar-contact-seperator {
         margin: 32px 0;
     }
 
-    .vcard__sidebar-contact-info {
+    .vcard__navbar-contact-info {
         max-width: calc(100% - 64px);
         width: calc(100% - 64px);
     }
@@ -679,25 +679,25 @@ article.active {
 
 @media (min-width: 768px) {
     /* Main styles */
-    .vcard__sidebar,
+    .vcard__navbar,
     article {
         width: 700px;
     }
 
-    /* Sidebar styles */
-    .vcard__sidebar-contacts-list {
+    /* Navbar styles */
+    .vcard__navbar-contacts-list {
         grid-template-columns: 1fr 1fr;
         gap: 30px 15px;
     }
 
-    .vcard__sidebar-profile-title {
+    .vcard__navbar-profile-title {
         --fs-6: 14px;
     }
 }
 
 @media (min-width: 1024px) {
     /* Main styles */
-    .vcard__sidebar,
+    .vcard__navbar,
     article {
         width: 950px;
     }
@@ -768,7 +768,7 @@ article.active {
     }
 
     /* Main styles */
-    .vcard__sidebar,
+    .vcard__navbar,
     article {
         width: auto;
     }
@@ -792,8 +792,8 @@ article.active {
         margin: 0;
     }
 
-    /* Sidebar styles */
-    .vcard__sidebar {
+    /* Navbar styles */
+    .vcard__navbar {
         position: sticky;
         top: 60px;
         max-height: max-content;
@@ -803,52 +803,52 @@ article.active {
         z-index: 1;
     }
 
-    .vcard__sidebar-profile {
+    .vcard__navbar-profile {
         flex-direction: column;
     }
 
-    .vcard__sidebar-memoji-box img {
+    .vcard__navbar-memoji-box img {
         width: 150px;
     }
 
-    .vcard__sidebar-profile-content .vcard__sidebar-profile-name {
+    .vcard__navbar-profile-content .vcard__navbar-profile-name {
         white-space: nowrap;
         text-align: center;
     }
 
-    .vcard__sidebar-profile-content .vcard__sidebar-profile-title {
+    .vcard__navbar-profile-content .vcard__navbar-profile-title {
         margin: auto;
     }
 
-    .vcard__sidebar-profile-toggle-btn {
+    .vcard__navbar-profile-toggle-btn {
         display: none;
     }
 
-    .vcard__sidebar-contact {
+    .vcard__navbar-contact {
         opacity: 1;
         visibility: visible;
     }
 
-    .vcard__sidebar-contacts-list {
+    .vcard__navbar-contacts-list {
         grid-template-columns: 1fr;
     }
 
-    .vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link) {
+    .vcard__navbar-contact-info :is(.vcard__navbar-contact-link) {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    .vcard__sidebar-contact-info :is(.vcard__sidebar-contact-link, address) {
+    .vcard__navbar-contact-info :is(.vcard__navbar-contact-link, address) {
         font-weight: var(--fw-300);
     }
 
-    .vcard__sidebar-contact-seperator:last-of-type {
+    .vcard__navbar-contact-seperator:last-of-type {
         margin: 15px 0;
         opacity: 0;
     }
 
-    .vcard__sidebar-social-list {
+    .vcard__navbar-social-list {
         justify-content: center;
     }
 

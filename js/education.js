@@ -5,6 +5,7 @@ const educations = [
         description: [
             "- Bachelor of Computer Science (Honours).",
             "- Dean's Honours List: 67% Average.",
+            "- Conducted a showcase on SDGs in conjunction with JCI Malaysia Global Goals Summit 2019 to promote insight on the United Nations Sustainable Development Goals.",
         ],
     },
     {

@@ -1,15 +1,23 @@
 const skills = [
     {
-        skillName: "ReactJS",
-        percentage: "60",
-    },
-    {
-        skillName: "NodeJS",
-        percentage: "60",
-    },
-    {
         skillName: "PHP",
         percentage: "70",
+    },
+    {
+        skillName: "JavaScript",
+        percentage: "70",
+    },
+    {
+        skillName: "Node.js",
+        percentage: "60",
+    },
+    {
+        skillName: "Express",
+        percentage: "60",
+    },
+    {
+        skillName: "React",
+        percentage: "60",
     },
     {
         skillName: "HTML",
@@ -20,16 +28,12 @@ const skills = [
         percentage: "80",
     },
     {
-        skillName: "JavaScript",
+        skillName: "MySQL",
         percentage: "70",
     },
     {
-        skillName: "MySQL",
-        percentage: "60",
-    },
-    {
         skillName: "MongoDB",
-        percentage: "40",
+        percentage: "50",
     },
     {
         skillName: "RESTful API",
@@ -37,7 +41,7 @@ const skills = [
     },
     {
         skillName: "Git",
-        percentage: "50",
+        percentage: "60",
     },
 ];
 

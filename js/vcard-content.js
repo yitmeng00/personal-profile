@@ -9,13 +9,13 @@ import skills from "./skills.js";
 
 // selectors
 const profileSection = document.getElementById(
-    "vcard__sidebar-profile-section"
+    "vcard__navbar-profile-section"
 );
 const contactSection = document.getElementById(
-    "vcard__sidebar-contact-section"
+    "vcard__navbar-contact-section"
 );
 const socialListSection = document.getElementById(
-    "vcard__sidebar-social-section"
+    "vcard__navbar-social-section"
 );
 const personalBioSection = document.getElementById(
     "vcard__personal-bio-section"
@@ -31,7 +31,7 @@ const skillSection = document.getElementById("vcard__skill-section");
 Profile Section
 */
 const figure = document.createElement("figure");
-figure.classList.add("vcard__sidebar-memoji-box");
+figure.classList.add("vcard__navbar-memoji-box");
 
 const img = document.createElement("img");
 img.src = "assets/images/ivan-memoji.png";
@@ -41,24 +41,24 @@ img.width = "80";
 figure.appendChild(img);
 
 const div = document.createElement("div");
-div.classList.add("vcard__sidebar-profile-content");
+div.classList.add("vcard__navbar-profile-content");
 
 const h1 = document.createElement("h1");
-h1.classList.add("vcard__sidebar-profile-name");
+h1.classList.add("vcard__navbar-profile-name");
 h1.title = "Ivan Wong";
 h1.textContent = "Ivan Wong";
 
 div.appendChild(h1);
 
 const p = document.createElement("p");
-p.classList.add("vcard__sidebar-profile-title");
+p.classList.add("vcard__navbar-profile-title");
 p.textContent = "Full Stack Developer";
 
 div.appendChild(p);
 
 const button = document.createElement("button");
-button.classList.add("vcard__sidebar-profile-toggle-btn");
-button.setAttribute("data-sidebar-btn", "");
+button.classList.add("vcard__navbar-profile-toggle-btn");
+button.setAttribute("data-navbar-btn", "");
 button.innerHTML = `
     <span>Show Contacts</span>
     <ion-icon name="chevron-down"></ion-icon>
@@ -76,7 +76,7 @@ contacts.forEach((contact) => {
     const { icon, title, link } = contact;
 
     const listItem = document.createElement("li");
-    listItem.classList.add("vcard__sidebar-contact-item");
+    listItem.classList.add("vcard__navbar-contact-item");
 
     const iconBox = document.createElement("div");
     iconBox.classList.add("icon-box");
@@ -85,10 +85,10 @@ contacts.forEach((contact) => {
     contactIcon.setAttribute("name", icon);
 
     const contactInfo = document.createElement("div");
-    contactInfo.classList.add("vcard__sidebar-contact-info");
+    contactInfo.classList.add("vcard__navbar-contact-info");
 
     const contactTitle = document.createElement("p");
-    contactTitle.classList.add("vcard__sidebar-contact-title");
+    contactTitle.classList.add("vcard__navbar-contact-title");
     contactTitle.innerText = title;
 
     iconBox.appendChild(contactIcon);
@@ -102,7 +102,7 @@ contacts.forEach((contact) => {
         contactInfo.appendChild(address);
     } else {
         const contactLink = document.createElement("a");
-        contactLink.classList.add("vcard__sidebar-contact-link");
+        contactLink.classList.add("vcard__navbar-contact-link");
         contactLink.setAttribute("href", `mailto:${link}`);
         contactLink.innerText = link;
         contactInfo.appendChild(contactLink);
@@ -119,12 +119,12 @@ socialMediaLinks.forEach((socialMediaLink) => {
     const { href, iconName } = socialMediaLink;
 
     const socialItem = document.createElement("li");
-    socialItem.classList.add("vcard__sidebar-social-item");
+    socialItem.classList.add("vcard__navbar-social-item");
 
     const socialLink = document.createElement("a");
     socialLink.href = href;
     socialLink.target = "_blank";
-    socialLink.classList.add("vcard__sidebar-social-link");
+    socialLink.classList.add("vcard__navbar-social-link");
 
     const icon = document.createElement("ion-icon");
     icon.name = iconName;

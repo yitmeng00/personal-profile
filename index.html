@@ -12,9 +12,9 @@
         />
 
         <!-- css and js src -->
-        <link rel="stylesheet" href="css/main.css?v=1.0.3" />
-        <script type="text/javascript" src="js/index.js?v=1.0.4" defer></script>
-        <script type="module" src="js/vcard-content.js?v=1.0.4" defer></script>
+        <link rel="stylesheet" href="css/main.css?v=1.0.4" />
+        <script type="text/javascript" src="js/index.js?v=1.0.5" defer></script>
+        <script type="module" src="js/vcard-content.js?v=1.0.5" defer></script>
         <script type="module" src="js/contacts.js?v=1.0.0" defer></script>
         <script type="module" src="js/education.js?v=1.0.1" defer></script>
         <script type="module" src="js/experiences.js?v=1.0.3" defer></script>
@@ -40,26 +40,26 @@
 
     <body>
         <main>
-            <!-- Navbar -->
-            <aside class="vcard__navbar" data-navbar>
+            <!-- Sidebar -->
+            <aside class="vcard__sidebar" data-sidebar>
                 <div
-                    id="vcard__navbar-profile-section"
-                    class="vcard__navbar-profile"
+                    id="vcard__sidebar-profile-section"
+                    class="vcard__sidebar-profile"
                 ></div>
 
-                <div class="vcard__navbar-contact">
-                    <div class="vcard__navbar-contact-seperator"></div>
+                <div class="vcard__sidebar-contact">
+                    <div class="vcard__sidebar-contact-seperator"></div>
 
                     <ul
-                        id="vcard__navbar-contact-section"
-                        class="vcard__navbar-contacts-list"
+                        id="vcard__sidebar-contact-section"
+                        class="vcard__sidebar-contacts-list"
                     ></ul>
 
-                    <div class="vcard__navbar-contact-seperator"></div>
+                    <div class="vcard__sidebar-contact-seperator"></div>
 
                     <ul
-                        id="vcard__navbar-social-section"
-                        class="vcard__navbar-social-list"
+                        id="vcard__sidebar-social-section"
+                        class="vcard__sidebar-social-list"
                     ></ul>
                 </div>
             </aside>
@@ -70,13 +70,21 @@
                 <nav class="navbar">
                     <ul class="navbar-list">
                         <li class="navbar-item">
-                            <button class="navbar-link active" data-nav-link data-navbar-btn>
+                            <button
+                                class="navbar-link active"
+                                data-nav-link
+                                data-sidebar-btn
+                            >
                                 About
                             </button>
                         </li>
 
                         <li class="navbar-item">
-                            <button class="navbar-link" data-nav-link data-navbar-btn>
+                            <button
+                                class="navbar-link"
+                                data-nav-link
+                                data-sidebar-btn
+                            >
                                 Resume
                             </button>
                         </li>

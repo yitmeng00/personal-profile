@@ -4,40 +4,63 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ivan's vCard</title>
-        <link rel="icon" type="image/x-icon" href="assets/images/ivan-memoji.png" />
-        <link rel="stylesheet" href="css/style.css?v=1.0.1">
+        <title>Ivan's portfolio</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/images/ivan-memoji.png"
+        />
+
+        <!-- css and js src -->
+        <link rel="stylesheet" href="css/main.css?v=1.0.2" />
+        <script type="text/javascript" src="js/index.js?v=1.0.2" defer></script>
         <script type="module" src="js/vcard-content.js?v=1.0.3" defer></script>
-        <script type="text/javascript" src="js/nav-sidebar-toggle.js?v=1.0.1" defer></script>
         <script type="module" src="js/contacts.js?v=1.0.0" defer></script>
         <script type="module" src="js/education.js?v=1.0.0" defer></script>
         <script type="module" src="js/experiences.js?v=1.0.2" defer></script>
         <script type="module" src="js/certifications.js?v=1.0.0" defer></script>
         <script type="module" src="js/personal-bio.js?v=1.0.2" defer></script>
         <script type="module" src="js/skills.js?v=1.0.1" defer></script>
-        <script type="module" src="js/social-media-links.js?v=1.0.0" defer></script>
-        <!-- Libraries -->
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script
+            type="module"
+            src="js/social-media-links.js?v=1.0.0"
+            defer
+        ></script>
+
+        <!-- ionicons src -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
     </head>
 
     <body>
         <main>
             <!-- Sidebar -->
             <aside class="vcard__sidebar" data-sidebar>
-                <div id="vcard__sidebar-profile-section" class="vcard__sidebar-profile">
-                </div>
+                <div
+                    id="vcard__sidebar-profile-section"
+                    class="vcard__sidebar-profile"
+                ></div>
 
                 <div class="vcard__sidebar-contact">
                     <div class="vcard__sidebar-contact-seperator"></div>
 
-                    <ul id="vcard__sidebar-contact-section" class="vcard__sidebar-contacts-list">
-                    </ul>
+                    <ul
+                        id="vcard__sidebar-contact-section"
+                        class="vcard__sidebar-contacts-list"
+                    ></ul>
 
                     <div class="vcard__sidebar-contact-seperator"></div>
 
-                    <ul id="vcard__sidebar-social-section" class="vcard__sidebar-social-list">
-                    </ul>
+                    <ul
+                        id="vcard__sidebar-social-section"
+                        class="vcard__sidebar-social-list"
+                    ></ul>
                 </div>
             </aside>
 
@@ -47,31 +70,41 @@
                 <nav class="navbar">
                     <ul class="navbar-list">
                         <li class="navbar-item">
-                            <button class="navbar-link  active" data-nav-link>About</button>
+                            <button class="navbar-link active" data-nav-link>
+                                About
+                            </button>
                         </li>
 
                         <li class="navbar-item">
-                            <button class="navbar-link" data-nav-link>Resume</button>
+                            <button class="navbar-link" data-nav-link>
+                                Resume
+                            </button>
                         </li>
                     </ul>
                 </nav>
 
                 <!-- About Page -->
-                <article class="vcard__about-page  active" data-page="about">
+                <article class="vcard__about-page active" data-page="about">
                     <header>
                         <h2 class="h2 article-title">About me</h2>
                     </header>
 
                     <!-- Personal Bio -->
-                    <section id="vcard__personal-bio-section" class="vcard__personal-bio">
-                    </section>
+                    <section
+                        id="vcard__personal-bio-section"
+                        class="vcard__personal-bio"
+                    ></section>
 
                     <!-- Licenses and Certifications -->
                     <section class="vcard__certification">
-                        <h3 class="h3 vcard__certification-title">Licenses & certifications</h3>
+                        <h3 class="h3 vcard__certification-title">
+                            Licenses & certifications
+                        </h3>
 
-                        <ul id="vcard__certification-section" class="vcard__certification-list">
-                        </ul>
+                        <ul
+                            id="vcard__certification-section"
+                            class="vcard__certification-list"
+                        ></ul>
                     </section>
                 </article>
 
@@ -83,7 +116,6 @@
 
                     <!-- Experiences -->
                     <section class="timeline">
-
                         <div class="title-wrapper">
                             <div class="icon-box">
                                 <ion-icon name="book-outline"></ion-icon>
@@ -92,8 +124,10 @@
                             <h3 class="h3">Experience</h3>
                         </div>
 
-                        <ol id="vcard__experience-section" class="timeline-list">
-                        </ol>
+                        <ol
+                            id="vcard__experience-section"
+                            class="timeline-list"
+                        ></ol>
                     </section>
 
                     <!-- Education -->
@@ -106,16 +140,20 @@
                             <h3 class="h3">Education</h3>
                         </div>
 
-                        <ol id="vcard__education-section" class="timeline-list">
-                        </ol>
+                        <ol
+                            id="vcard__education-section"
+                            class="timeline-list"
+                        ></ol>
                     </section>
 
                     <!-- Skills -->
                     <section class="vcard__skills">
                         <h3 class="h3 vcard__skills-title">My skills</h3>
 
-                        <ul id="vcard__skill-section" class="vcard__skills-list vcard__skills-content-card">
-                        </ul>
+                        <ul
+                            id="vcard__skill-section"
+                            class="vcard__skills-list vcard__skills-content-card"
+                        ></ul>
                     </section>
                 </article>
             </div>

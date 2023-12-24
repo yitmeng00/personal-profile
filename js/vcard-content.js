@@ -58,7 +58,7 @@ div.appendChild(p);
 
 const button = document.createElement("button");
 button.classList.add("vcard__sidebar-profile-toggle-btn");
-button.setAttribute("data-sidebar-btn", "");
+button.setAttribute("data-navbar-btn", "");
 button.innerHTML = `
     <span>Show Contacts</span>
     <ion-icon name="chevron-down"></ion-icon>

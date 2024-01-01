@@ -32,7 +32,7 @@ const experiences = [
         jobTitle: "FULL STACK DEVELOPER INTERN",
         date: "September 2021 - December 2021",
         description: [
-            "- Worked as a full-stack developer, collaborating with the software development team to develop additional features for an  internal project for TM client using PHP, JavaScript, HTML, CSS, Bootstrap, and MySQL.",
+            "- Collaborating with the software development team to develop additional features for an  internal project for TM client using PHP, JavaScript, HTML, CSS, Bootstrap, and MySQL.",
             "- Wrote and tested server-side logics, integrating them with front-end screens and ensuring their functionality.",
             "- Administered and managed the MySQL database.",
         ],

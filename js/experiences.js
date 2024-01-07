@@ -20,7 +20,7 @@ const experiences = [
         jobTitle: "WEB APPLICATION DEVELOPER INTERN",
         date: "January 2022 - April 2022",
         description: [
-            "- Worked as a back-end developer, involved and participated in the entire application lifecycle within a software development team to build a Workflow Automation System in an Agile environment.",
+            "- Worked as a back-end developer, involved and participated in the entire application lifecycle within a software development team to build a Workflow Automation System in an Agile environment. It is a software and service application which allow client to configure their own company workflow processes – from requestor to approval incorporating booking of meeting slots, documenting meeting outcomes and actions, taking through reviews and approvals to generate an agreed business outcome.",
             "- Collaborated closely with front-end developers to integrate front-end screens with server-side logics.",
             "- Ensured the system’s ability to interact with multiple APIs and databases, including MySQL and MongoDB.",
             "- Designed and developed custom REST APIs using C#, and ASP.NET.",
